@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_mvvm/data/app_exceptions.dart';
+import 'package:getx_mvvm/utils/utils.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +14,8 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          throw InternetException();
+          Utils.toastMessageCenter("This is testing!");
+          // Utils.snackBar("Test", "This is testing!");
         },
       ),
     );
